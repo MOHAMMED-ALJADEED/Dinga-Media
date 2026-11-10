@@ -47,3 +47,7 @@
   - `NEXT_PUBLIC_SUPABASE_URL`
   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - Never hardcode API keys, credentials, or private secrets in source code.
+## 4. Customer Support AI Integration (Runtime)
+- **Primary Engine**: Ultra-low-cost LLM API endpoint (Jev / DeepSeek-tier) for customer agent routing.
+- **Fallback Engine**: Automated fallback to OpenAI (GPT-4o-mini) if the primary API fails.
+- **Scope**: Internal agent API only. Core development remains strictly driven by Claude Code.
