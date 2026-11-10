@@ -20,3 +20,30 @@
 - **Goal-Oriented:** I will use the `/goal` command. Work autonomously until the specific success criteria are met. 
 - **Self-Verification:** Never trust your first output. Run local builds or write unit tests before presenting code.
 - **Context Management:** Do not bloat the context with unnecessary explanations. Let the code speak for itself.
+# Dinga Media — Technical Execution Rules
+
+## Tech Stack
+- Framework: Next.js (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Backend / Auth / DB: Supabase (via `@supabase/supabase-js`)
+- Hosting & Deployment: Vercel (Production-linked)
+
+## 1. Andrej Karpathy Engineering Safeguards
+- **Minimal Mutation**: Never overwrite, refactor, or delete working files unless explicitly requested. Touch only what is strictly necessary.
+- **Minimal Dependencies**: Do not install external libraries without explicit necessity. Maximize standard Tailwind CSS and native Web APIs.
+- **Intentional Logic**: Explain *why* a particular architecture or logic decision was made in concise code comments, not just *what* it does.
+- **Fail-Safe Verifications**: Verify builds and lint passes before concluding tasks (`npm run build`).
+
+## 2. Frontend Design & Impeccable UI Principles
+- **Distinctive Studio Aesthetic**: Avoid generic Bootstrap/SaaS templates. Follow the modern, bespoke studio feel observed in reference materials (`kree8.studio` layout, tilted cards, clean typography, spacious negative space).
+- **Typography & Layout**: Bold, opinionated typography with disciplined tracking and leading. Use dynamic flex/grid layouts with crisp borders and soft shadows.
+- **Media Placeholders**:
+  - Keep high-fidelity placeholders featuring the Dinga brand mark for media containers.
+  - Structure media wrappers cleanly to allow immediate drop-in replacement with Higgsfield-generated videos/assets without layout breakage.
+
+## 3. Environment & Credentials
+- All Supabase integration relies on environment variables:
+  - `NEXT_PUBLIC_SUPABASE_URL`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- Never hardcode API keys, credentials, or private secrets in source code.
